@@ -18,63 +18,57 @@
 								<li class="last"><a class="pinterest fa fa-pinterest" href="#"><span>pinterest</span></a></li>
 							</ul>
 						</div>
-						<div class="f-col f-col2 col-sm-4 col-md-2 col-sms-6 col-smb-12">
-							<div class="footer-static-title">
-								<h3>information</h3>
+						<?php if ($informations): ?>
+							<div class="f-col f-col2 col-sm-4 col-md-2 col-sms-6 col-smb-12">
+								<div class="footer-static-title">
+									<h3><?php echo $text_information; ?></h3>
+								</div>
+								<div class="footer-static-content">
+									<ul>
+										<?php foreach ($informations as $information): ?>
+											<li><a href="<?php echo $information['href']; ?>"><?php echo $information['title']; ?></a></li>
+										<?php endforeach; ?>
+									</ul>
+								</div>
 							</div>
-							<div class="footer-static-content">
-								<ul>
-									<li class="first"><a href="index.php/about-magento-demo-store.html">About us</a></li>
-									<li><a href="index.php/contacts.html">Delivery Information</a></li>
-									<li><a href="index.php/privacy-policy-cookie-restriction-mode.html">Privacy Policy</a></li>
-									<li><a href="index.php/contacts.html">Discount</a></li>
-									<li><a href="index.php/customer-service.html">Custom Service</a></li>
-									<li class="last"><a href="index.php/catalogsearch/term/popular.html">Terms &amp; Condition</a></li>
-								</ul>
-							</div>
-						</div>
+						<?php endif; ?>
+						
 						<div class="f-col f-col3 col-sm-4 col-md-2 col-sms-6 col-smb-12">
 							<div class="footer-static-title">
-								<h3>customer care</h3>
+								<h3><?php echo $text_service; ?></h3>
 							</div>
 							<div class="footer-static-content">
 								<ul>
-									<li class="first"><a href="index.php/catalog/seo_sitemap/category.html">Sitemap</a></li>
-									<li><a href="index.php/privacy-policy-cookie-restriction-mode.html">Privacy Policy</a></li>
-									<li><a href="index.php/customer/account/login/index.html">Your Account</a></li>
-									<li><a href="index.php/catalogsearch/advanced.html">Advanced Search</a></li>
-									<li><a href="index.php/catalogsearch/term/popular.html">Terms &amp; Condition</a></li>
-									<li class="last"><a href="index.php/contacts.html">Contact Us</a></li>
+									<li class="first"><a href="<?php echo $contact; ?>"><?php echo $text_contact; ?></a></li>
+									<li><a href="<?php echo $return; ?>"><?php echo $text_return; ?></a></li>
+									<li class="last"><a href="<?php echo $sitemap; ?>"><?php echo $text_sitemap; ?></a></li>
 								</ul>
 							</div>
 						</div>
+						
 						<div class="f-col f-col4 col-sm-4 col-md-2 col-sms-6 col-smb-12">
 							<div class="footer-static-title">
-								<h3>quick link</h3>
+								<h3><?php echo $text_extra; ?></h3>
 							</div>
 							<div class="footer-static-content">
 								<ul>
-									<li class="first"><a href="index.php/contacts.html">My Account</a></li>
-									<li><a href="index.php/contacts.html">Order History</a></li>
-									<li><a href="index.php/contacts.html">Returns</a></li>
-									<li><a href="index.php/contacts.html">Specials</a></li>
-									<li><a href="index.php/contacts.html">Mobiles</a></li>
-									<li class="last"><a href="index.php/catalog/seo_sitemap/category.html">Site Map</a></li>
+									<li class="first"><a href="<?php echo $manufacturer; ?>"><?php echo $text_manufacturer; ?></a></li>
+									<li><a href="<?php echo $voucher; ?>"><?php echo $text_voucher; ?></a></li>
+									<li><a href="<?php echo $affiliate; ?>"><?php echo $text_affiliate; ?></a></li>
+									<li class="last"><a href="<?php echo $special; ?>"><?php echo $text_special; ?></a></li>
 								</ul>
 							</div>
 						</div>
 						<div class="f-col f-col5 col-sm-4 col-md-2 col-sms-6 col-smb-12">
 							<div class="footer-static-title">
-								<h3>My Account</h3>
+								<h3><?php echo $text_account; ?></h3>
 							</div>
 							<div class="footer-static-content">
 								<ul>
-									<li class="first"><a href="index.php/about-magento-demo-store.html">About us</a></li>
-									<li><a href="index.php/contacts.html">Delivery Information</a></li>
-									<li><a href="index.php/privacy-policy-cookie-restriction-mode.html">Privacy Policy</a></li>
-									<li><a href="index.php/contacts.html">Discount</a></li>
-									<li><a href="index.php/customer-service.html">Custom Service</a></li>
-									<li class="last"><a href="index.php/catalogsearch/term/popular.html">Terms &amp; Condition</a></li>
+									<li class="first"><a href="<?php echo $account; ?>"><?php echo $text_account; ?></a></li>
+									<li><a href="<?php echo $order; ?>"><?php echo $text_order; ?></a></li>
+									<li><a href="<?php echo $wishlist; ?>"><?php echo $text_wishlist; ?></a></li>
+									<li class="last"><a href="<?php echo $newsletter; ?>"><?php echo $text_newsletter; ?></a></li>
 								</ul>
 							</div>
 						</div>
@@ -113,22 +107,23 @@
 								<div class="logo-bottom"><a href="#">logo</a></div>
 								<div class="box-address">
 									<address>
-									Copyright &copy; 2014 <a href="http://sunnytheme.com/">Sunnytheme.com</a>. All Rights Reserved.
+										<?php echo $powered; ?>
 									</address>
-									<p class="mobile">Mobile:<a> (00) 123 456 789</a></p>
-									<p class="email">Email:<a href="#"> thephoenix@info.com</a></p>
+									<!--<p class="mobile">Mobile:<a> (00) 123 456 789</a></p>
+									<p class="email">Email:<a href="#"> thephoenix@info.com</a></p>-->
 								</div>
 							</div>
 							<div class="f-col f-col62 col-xs-12 col-sm-6">
 								<div class="link-bottom">
 									<ul class="links">
-										<li class="first" ><a href="index.php/catalog/seo_sitemap/category/index.html" title="Site Map" >Site Map</a></li>
-										<li ><a href="index.php/catalogsearch/term/popular/index.html" title="Search Terms" >Search Terms</a></li>
-										<li ><a href="index.php/catalogsearch/advanced/index.html" title="Advanced Search" >Advanced Search</a></li>
-										<li ><a href="index.php/sales/guest/form/index.html" title="Orders and Returns" >Orders and Returns</a></li>
-										<li class=" last" ><a href="index.php/contacts/index.html" title="Contact Us" >Contact Us</a></li>
+										<li class="first" ><a href="<?php echo $sitemap; ?>" title="Site Map" >Site Map</a></li>
+										<li ><a href="<?php echo $newsletter; ?>" title="Newsletter" >Newsletter</a></li>
+										<li ><a href="<?php echo $manufacturer; ?>" title="Manufacturer" >Manufacturer</a></li>
+										<li ><a href="<?php echo $voucher; ?>" title="Voucher" >Voucher</a></li>
+										<li ><a href="<?php echo $return; ?>" title="Orders and Returns" >Orders and Returns</a></li>
+										<li class=" last" ><a href="<?php echo $contact; ?>" title="Contact Us" >Contact Us</a></li>
 									</ul>
-									<p class="design">Designed by Kavindesign</p>
+									<p class="design">Designed by test</p>
 								</div>
 							</div>
 						</div>
